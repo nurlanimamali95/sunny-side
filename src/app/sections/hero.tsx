@@ -4,7 +4,7 @@ import hero from "@/app/assets/hero.jpg";
 export default function Hero() {
   return (
     <div className="relative h-[95vh] mb-[5rem]">
-      <div className="absolute inset-0 bg-yellow-500 opacity-40 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
       <Image
         src={hero}
         alt="hero"

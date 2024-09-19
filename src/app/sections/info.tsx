@@ -2,8 +2,8 @@ import Accordion from "@/app/components/accordion";
 
 export default function Info() {
   return (
-    <div className="lg:flex">
-      <div className="flex flex-col gap-7 w-[40%]">
+    <div className="flex flex-col lg:flex-row gap-[5rem] lg:gap-3">
+      <div className="flex flex-col gap-10 lg:w-[40%]">
         <h2 className="font-semibold text-xl">
           Discover the Authentic Flavors of Eastern Europe in the Heart of
           Amsterdam, with Vegan and Vegetarian Delights

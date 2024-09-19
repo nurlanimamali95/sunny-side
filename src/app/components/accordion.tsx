@@ -8,7 +8,7 @@ export default function Accordion() {
   const [open, setOpen] = useState(items[0].id);
 
   return (
-    <section className="p-4">
+    <section className="">
       <div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden">
         {items.map((item) => {
           return (
@@ -44,7 +44,7 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
   return (
     <>
       <button
-        className="hover:bg-white bg-yellow-300 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className="hover:bg-black hover:text-white bg-yellow-300 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
         <span
