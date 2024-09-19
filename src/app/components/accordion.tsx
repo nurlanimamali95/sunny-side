@@ -44,7 +44,7 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
   return (
     <>
       <button
-        className="bg-white hover:bg-yellow-300 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className="hover:bg-white bg-yellow-300 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
         <span
@@ -56,8 +56,6 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
           {title}
         </span>
         <span className="block lg:hidden text-xl font-light">{title}</span>
-
-        <span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
       </button>
 
       <AnimatePresence>
@@ -128,32 +126,28 @@ const items = [
   {
     id: 1,
     title: "All-Day Breakfast",
-    imgSrc:
-      "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    imgSrc: "/images/breakfast.jpg",
     description:
       "Whether you're an early riser or not, our all-day breakfast has something for everyone. From fluffy pancakes to savory crêpes, enjoy your favorite breakfast dishes anytime. Perfect for those who want to start their day with a touch of indulgence.",
   },
   {
     id: 2,
     title: "Eastern European Dishes",
-    imgSrc:
-      "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+    imgSrc: "/images/classics.jpg",
     description:
       "Experience authentic Eastern European flavors with dishes like kibinai (traditional mini pies) and cabbage rolls. These recipes are passed down through generations, bringing rich, home-cooked warmth to your plate right here in Amsterdam.",
   },
   {
     id: 3,
     title: "Fresh & Local",
-    imgSrc:
-      "https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    imgSrc: "/images/ingredients.jpg",
     description:
       "We prioritize using fresh, seasonal ingredients in all of our meals. From locally sourced vegetables to responsibly caught salmon, our dishes are crafted to bring out the best natural flavors. Sustainability and quality are key in every bite.",
   },
   {
     id: 4,
     title: "Vegan Options",
-    imgSrc:
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    imgSrc: "/images/vegan.jpg",
     description:
       "Sunny Side offers a variety of vegan and vegetarian dishes to cater to every diet. Enjoy flavorful creations like our vegan borscht or vegetarian dumplings, ensuring every guest can enjoy our Eastern European specialties.",
   },
