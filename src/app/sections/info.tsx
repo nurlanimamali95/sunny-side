@@ -2,13 +2,14 @@ import Accordion from "@/app/components/accordion";
 
 export default function Info() {
   return (
-    <div className="flex flex-col lg:flex-row gap-[5rem] lg:gap-3">
-      <div className="flex flex-col gap-10 lg:w-[40%]">
-        <h2 className="font-semibold text-xl">
+    <div className="flex flex-col lg:flex-row gap-[5rem] lg:gap-[7rem]">
+      <div></div>
+      <div className="flex flex-col  gap-[8rem] lg:w-[40%]">
+        <h2 className="font-semibold text-2xl">
           Discover the Authentic Flavors of Eastern Europe in the Heart of
-          Amsterdam, with Vegan and Vegetarian Delights
+          Amsterdam, with Vegan and Vegetarian Delights.
         </h2>
-        <p>
+        <p className="text-xl">
           At Sunny Side, we bring you a unique dining experience where Eastern
           European tradition meets modern culinary innovation. From hearty
           all-day breakfasts to fresh seasonal dishes, we cater to all tastes
@@ -20,7 +21,6 @@ export default function Info() {
           inclusivity.
         </p>
       </div>
-
       <Accordion />
     </div>
   );

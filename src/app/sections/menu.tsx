@@ -1,4 +1,5 @@
-import Accordion from "@/app/components/menuAccordion";
+import MenuAccordion from "@/app/components/menuAccordion";
+import DownloadSection from "@/app/components/download";
 
 export default function Menu() {
   return (
@@ -6,8 +7,9 @@ export default function Menu() {
       <h2 className="font-bold text-2xl my-[7rem] text-center">
         Explore Our Menu
       </h2>
-      <div className="h-[80vh]">
-        <Accordion />
+      <div className="">
+        <MenuAccordion />
+        <DownloadSection />
       </div>
     </div>
   );

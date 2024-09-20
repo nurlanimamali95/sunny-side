@@ -1,10 +1,18 @@
+export interface Side {
+  title: string;
+  list: string[];
+}
+
 export interface MenuItem {
   name: string;
-  details: string;
+  details?: string;
   priceSmall?: string;
   priceBig?: string;
   price?: string;
-  isVegan?: boolean; // Add vegan flag
+  isVegan?: boolean;
+  isVegeterian?: boolean;
+  extras?: string[];
+  sides?: Side[];
 }
 
 export const items: { id: number; title: string; description: MenuItem[] }[] = [
@@ -69,57 +77,227 @@ export const items: { id: number; title: string; description: MenuItem[] }[] = [
         details: "Beets, carrots, cabbage. potatoes & beans.",
         priceSmall: "€8.50",
         priceBig: "€11.50",
+        isVegan: true,
       },
     ],
   },
   {
     id: 2,
-    title: "Eastern European Dishes",
+    title: "Salads",
     description: [
       {
-        name: "Kibinai",
-        details: "Traditional mini pies stuffed with savory fillings.",
-        price: "€7",
+        name: "OLIVJE (260GR)",
+        details:
+          "Traditional Eastern European salad made with potatoes, vegetables, eggs, meat & mayo.",
+        price: "€5",
       },
       {
-        name: "Cabbage Rolls",
+        name: "BLUSHING IBURG (400GR)",
+        details: "Red beets, potato, carrot, egg on marinaded herring.",
+        price: "€9.50",
+      },
+      {
+        name: "CAESAR SALAD",
+        details: "Classic Caesar salad made with homemade sauce.",
+        price: "€14.50",
+      },
+      {
+        name: "LIMA KISS",
         details:
-          "Stuffed cabbage leaves with rice and minced meat, served with tomato sauce.",
-        price: "€14",
+          "Avocado, cucumbers, tomatoes, green leaves & lemon served with grilled chicken or salmon.",
+        price: "€10",
+      },
+      {
+        name: "VINAIGRETTE",
+        details:
+          "Red beets, carrot, potato, cabbage, beans, pickles & sunflower oil.",
+        price: "€5",
+        isVegan: true,
+      },
+      {
+        name: "SNOWY BOROVETZ",
+        details: "Mixed salad, paprika, tomato, cucumber & feta.",
+        price: "€8.50",
+        isVegeterian: true,
+      },
+      {
+        name: "GREEK SALAD ",
+        details: "Paprika, tomato, cucumber, onion, olives & feta.",
+        price: "€11",
+        isVegeterian: true,
       },
     ],
   },
   {
     id: 3,
-    title: "Fresh & Local",
+    title: "Crepes",
     description: [
       {
-        name: "Grilled Salmon",
-        details: "Responsibly caught salmon with seasonal vegetables.",
-        price: "€18",
+        name: "CLASSIC CRÊPES",
+        price: "€10.50",
+        isVegeterian: true,
       },
       {
-        name: "Local Veggie Plate",
-        details:
-          "A variety of fresh, seasonal, and locally sourced vegetables.",
-        price: "€12",
+        name: "CREPES WITH MUSHROOMS",
+        price: "€10,90",
+        isVegeterian: true,
+      },
+      {
+        name: "CRÊPES WITH HAM & CHEESE",
+        price: "€10",
+      },
+      {
+        name: "CRÊPES WITH BEEF FILLING",
+        price: "€11,90",
+      },
+      {
+        name: "CRÊPES WITH CHICKEN FILLING",
+        price: "€11,90",
+      },
+      {
+        name: "CRÊPES WITH SALMON & CAVIAR",
+        price: "€13,50",
+      },
+      {
+        name: "CRÊPES WITH COTTAGE CHEESE",
+        price: "€11,90",
+        isVegeterian: true,
+      },
+      {
+        name: "CRÊPES WITH BANANA",
+        price: "€10,50",
+        isVegeterian: true,
+      },
+      {
+        name: "COTTAGE CHEESE PANCAKES (SYRNIKI)",
+        price: "€13,50",
+        isVegeterian: true,
       },
     ],
   },
   {
     id: 4,
-    title: "Vegan Options",
+    title: "Vareniki",
     description: [
       {
-        name: "Vegan Borscht",
-        details: "A rich beetroot soup with potatoes, cabbage, and carrots.",
-        price: "€10",
+        name: "FOUR CHEESES",
+        price: "€16,50",
+        isVegeterian: true,
       },
       {
-        name: "Vegetarian Dumplings",
+        name: "CABBAGE",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+      {
+        name: "POTATO",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+      {
+        name: "POTATO & MUSHROOMS",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+      {
+        name: "CHERRY",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+      {
+        name: "COTTAGE CHEESE",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+      {
+        name: "MUSHROOMS",
+        price: "€16,50",
+        isVegeterian: true,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Pelmeny",
+    description: [
+      { name: "PORK", price: "€16,50" },
+      { name: "BEEF", price: "€16,50" },
+      { name: "CHICKEN & CHEESE", price: "€16,50" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Main Dishes",
+    description: [
+      {
+        name: "CHICKEN KYIV",
         details:
-          "Stuffed with mashed potatoes and mushrooms, served with vegan sour cream.",
-        price: "€11",
+          "Crumbed & fried chicken breast stuffed with melting garlic butter & herbs.",
+        price: "€18",
+      },
+      {
+        name: "CABBAGE ROLLS",
+        details: "Cabbage Tilled with beer, chicken a nice. ",
+        price: "€17,90",
+      },
+      {
+        name: "BEEF STEW",
+        details: "Premium beefsteak with mixed veggies.",
+        price: "€18,50",
+      },
+      {
+        name: "SCHNITZEL",
+        details:
+          "Chicken breast coated in bread crumbs & on top garlic cheese with mayonnaise.",
+        price: "€18",
+      },
+      {
+        name: "CHICKEN TAGINE",
+        details: "Chicken marinated for eight hours in Moroccan spices.",
+        price: "€17,80",
+      },
+      {
+        name: "SALMON OVEN-BAKED",
+        details:
+          "Fresh salmon filet baked with lemon and homemade green sauce.",
+        price: "€18,50",
+      },
+      {
+        name: "KOTLETI",
+        details: "Two delicious pork cutlets.",
+        price: "€17",
+      },
+      {
+        name: "LAMB KEBAB",
+        details: "Lamb cooked on the grill with onion.",
+        price: "€18",
+      },
+      {
+        name: "VEGAN STEW",
+        details:
+          "Eggplant, zucchini, paprika, onion, tomato, garlic & olive oil.",
+        price: "€16,50",
+        isVegan: true,
+      },
+      {
+        name: "ŽEMAIČIŲ BLYNAI",
+        details:
+          "Potato pancakes filled with minced pork or chicken. Served with mushroom sauce.",
+        price: "€14,20",
+        extras: ["EXTRA: MUSHROOM SAUCE - €2"],
+      },
+      {
+        name: "*Choose your side dish & salad",
+        sides: [
+          {
+            title: "SIDE DISHES",
+            list: ["Oven-baked potato", "Mashed potato", "Buckwheat", "Rice"],
+          },
+          {
+            title: "SALADS",
+            list: ["Fresh salad", "Pickled cabbage"],
+          },
+        ],
       },
     ],
   },
