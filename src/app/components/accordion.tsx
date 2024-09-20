@@ -44,7 +44,7 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
   return (
     <>
       <button
-        className="hover:bg-black hover:text-white bg-yellow-300 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className=" font-overpass hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
         <span
@@ -71,14 +71,14 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="w-full h-full overflow-hidden relative bg-black flex items-end"
+            className="w-full h-full overflow-hidden relative bg-primary-black flex items-end"
           >
             <motion.div
               variants={descriptionVariants}
               initial="closed"
               animate="open"
               exit="closed"
-              className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
+              className="px-4 py-2 bg-white-yellow/40 backdrop-blur-sm text-primary-black"
             >
               <p>{description}</p>
             </motion.div>
