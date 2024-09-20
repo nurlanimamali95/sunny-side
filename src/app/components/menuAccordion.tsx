@@ -4,12 +4,12 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { items, MenuItem } from "@/app/utils/menuData";
 
-export default function Accordion() {
+export default function MenuAccordion() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section className="p-4">
-      <div className="flex flex-col h-fit w-full max-w-6xl mx-auto shadow overflow-hidden">
+      <div className="flex flex-col h-fit w-full mx-auto shadow overflow-hidden">
         {items.map((item) => {
           return (
             <Panel
@@ -22,6 +22,12 @@ export default function Accordion() {
             />
           );
         })}
+      </div>
+      <div className="bg-gray-100 text-gray-700 p-4 mb-6 rounded border border-gray-200 w-fit border-t-0">
+        <p className="text-sm">
+          <span>🌱</span> indicates vegetarian options.
+          <span className="ml-2">🌱🌱</span> indicates vegan options.
+        </p>
       </div>
     </section>
   );
@@ -41,10 +47,12 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
   return (
     <>
       <button
-        className="hover:bg-black hover:text-white bg-yellow-300 transition-colors p-3 border-b-[1px] border-slate-200 flex flex-row justify-between items-center gap-4 relative group"
+        className="hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-b-[1px] border-slate-200 flex flex-row justify-between items-center gap-4 relative group"
         onClick={() => setOpen(isOpen ? null : id)}
       >
-        <span className="block text-xl font-light">{title}</span>
+        <span className="block text-4xl font-light font-abraz-script">
+          {title}
+        </span>
       </button>
 
       <AnimatePresence>
@@ -55,7 +63,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="w-full h-full overflow-hidden relative bg-white flex items-start"
+            className="w-full h-full overflow-hidden relative bg-primary-white flex items-start"
           >
             <motion.div
               variants={descriptionVariants}
@@ -64,7 +72,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
               exit="closed"
               className="px-4 py-2 w-full"
             >
-              <ul className="space-y-6">
+              <ul>
                 {description.map((menuItem: MenuItem, index: number) => (
                   <li
                     key={index}
@@ -74,28 +82,62 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
                       <h3 className="text-lg font-semibold">
                         {menuItem.name}
                         {menuItem.isVegan && (
+                          <span className="ml-2 text-green-500">🌱🌱</span>
+                        )}
+                        {menuItem.isVegeterian && (
                           <span className="ml-2 text-green-500">🌱</span>
                         )}
                       </h3>
                       <p className="text-sm text-gray-600">
                         {menuItem.details}
                       </p>
+                      {menuItem.sides && menuItem.sides.length > 0 && (
+                        <div className="mt-2">
+                          {menuItem.sides.map((side, sideIndex) => (
+                            <div key={sideIndex} className="mb-4">
+                              <h4 className="font-semibold">{side.title}</h4>
+                              <ul className="list-disc pl-5 mt-1">
+                                {side.list.map((sideItem, listIndex) => (
+                                  <li
+                                    key={listIndex}
+                                    className="text-sm text-gray-500"
+                                  >
+                                    {sideItem}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <div className="text-right">
                       {menuItem.priceSmall && (
-                        <p className="text-sm font-light">
+                        <p className="text-[1rem] font-semibold">
                           Small: {menuItem.priceSmall}
                         </p>
                       )}
                       {menuItem.priceBig && (
-                        <p className="text-sm font-light">
+                        <p className="text-[1rem] font-semibold">
                           Big: {menuItem.priceBig}
                         </p>
                       )}
                       {menuItem.price && (
-                        <p className="text-sm font-light">
-                          Price: {menuItem.price}
+                        <p className="text-[1rem] font-semibold">
+                          {menuItem.price}
                         </p>
+                      )}
+                      {menuItem.extras && (
+                        <ul className="">
+                          {menuItem.extras.map((extra, extraIndex) => (
+                            <li
+                              key={extraIndex}
+                              className="text-[1rem] font-bold"
+                            >
+                              {extra}
+                            </li>
+                          ))}
+                        </ul>
                       )}
                     </div>
                   </li>
@@ -111,7 +153,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
 
 const panelVariants = {
   open: {
-    height: "700px",
+    height: "auto",
   },
   closed: {
     height: "0px",
