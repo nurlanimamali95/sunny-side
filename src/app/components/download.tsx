@@ -1,13 +1,13 @@
 function DownloadButton() {
   return (
     <div>
-      <button className="relative group overflow-hidden pl-6 h-14 flex space-x-6 items-center bg-blue-500">
+      <button className="relative group overflow-hidden pl-6 h-14 flex space-x-6 items-center bg-mid-yellow">
         <span className="relative uppercase text-base text-white">
           Download
         </span>
         <div
           aria-hidden="true"
-          className="w-14 bg-blue-600 transition duration-300 -translate-y-7 group-hover:translate-y-7"
+          className="w-14 bg-mid-yellow transition duration-300 -translate-y-7 group-hover:translate-y-7"
         >
           <div className="h-14 flex">
             <svg
@@ -45,17 +45,17 @@ function DownloadButton() {
 
 export default function DownloadSection() {
   return (
-    <>
-      <div className="lg:w-[30%] p-4 h-fit rounded-lg shadow-md">
+    <div>
+      <div className="max-w-[20rem] bg-primary-white p-4 h-fit rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-4">Download Our Menu</h3>
         <p className="text-sm text-gray-600 mb-6">
           Want to keep a copy of our menu for later? You can download it in PDF
           format.
         </p>
-        <a href="/path-to-your-menu.pdf" download>
+        <a href="/images/menu.pdf" download>
           <DownloadButton />
         </a>
       </div>
-    </>
+    </div>
   );
 }
