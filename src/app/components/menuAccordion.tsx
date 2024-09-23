@@ -23,7 +23,7 @@ export default function MenuAccordion() {
           );
         })}
       </div>
-      <div className="bg-gray-100 text-gray-700 p-4 mb-6 rounded border border-gray-200 w-fit border-t-0">
+      <div className="bg-gray-100 text-gray-700 p-4 mb-6  w-fit border-t-0">
         <p className="text-sm">
           <span>🌱</span> indicates vegetarian options.
           <span className="ml-2">🌱🌱</span> indicates vegan options.
