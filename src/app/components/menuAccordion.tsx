@@ -8,7 +8,7 @@ export default function MenuAccordion() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="p-4">
+    <section className="p-4 pt-0">
       <div className="flex flex-col h-fit w-full mx-auto shadow overflow-hidden">
         {items.map((item) => {
           return (
