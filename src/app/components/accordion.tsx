@@ -44,7 +44,7 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
   return (
     <>
       <button
-        className=" font-overpass hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+        className=" font-overpass hover:bg-primary-black hover:text-primary-white bg-mid-yellow transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
         <span
