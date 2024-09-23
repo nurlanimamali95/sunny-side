@@ -3,6 +3,7 @@ import Hero from "@/app/sections/hero";
 import Partners from "@/app/sections/partners";
 import Info from "@/app/sections/info";
 import Menu from "@/app/sections/menu";
+import Location from "@/app/sections/location";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Partners />
       <Info />
       <Menu />
+      <Location/>
     </div>
   );
 }
