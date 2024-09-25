@@ -3,7 +3,7 @@ import DownloadSection from "@/app/components/download";
 
 export default function Menu() {
   return (
-    <div className="container mx-auto px-4">
+    <div id="menu" className="container mx-auto px-4">
       <h2 className="font-bold text-2xl my-[7rem] text-center">
         Explore Our Menu
       </h2>
