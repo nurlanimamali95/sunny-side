@@ -4,6 +4,7 @@ import Partners from "@/app/sections/partners";
 import Info from "@/app/sections/info";
 import Menu from "@/app/sections/menu";
 import Location from "@/app/sections/location";
+import Contact from "@/app/sections/contact";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Partners />
       <Info />
       <Menu />
-      <Location/>
+      <Location />
+      <Contact />
     </div>
   );
 }
