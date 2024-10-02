@@ -9,3 +9,11 @@ html {
 body {
   @apply font-overpass;
 }
+
+a,
+h1,
+h2,
+h3,
+p {
+  user-select: none;
+}
