@@ -55,7 +55,7 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
         >
           {title}
         </span>
-        <span className="block lg:hidden text-xl font-light">{title}</span>
+        <span className="block lg:hidden text-xl">{title}</span>
       </button>
 
       <AnimatePresence>
@@ -78,9 +78,9 @@ function Panel({ open, setOpen, id, title, imgSrc, description }: PanelProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className="px-4 py-2 bg-white-yellow/40 backdrop-blur-sm text-primary-black"
+              className="px-4 py-2 bg-white-yellow/80 backdrop-blur-sm text-primary-black"
             >
-              <p>{description}</p>
+              <p className="">{description}</p>
             </motion.div>
           </motion.div>
         )}

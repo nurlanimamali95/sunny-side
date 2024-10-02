@@ -89,18 +89,18 @@ function Item({
         <strong>Working Hours:</strong> {workingHours}
       </p>
 
-      <p className="text-sm text-gray-600 relative z-10 duration-1000">
+      <p className="text-sm  relative z-10 duration-1000">
         <strong>{eatIn ? "Eat-in & Takeaway" : "Takeaway Only"}</strong>
       </p>
 
-      <p className="text-sm text-gray-600 mt-2 relative z-10 duration-1000">
+      <p className="text-sm mt-2 relative z-10 duration-1000">
         <strong>Contact Person:</strong> {contactPerson}
       </p>
-      <p className="text-sm text-gray-600 relative z-10 duration-1000">
+      <p className="text-sm relative z-10 duration-1000">
         <strong>Phone:</strong> {contactNumber}
       </p>
 
-      <p className="text-sm text-red-600 mt-4 relative z-10 duration-1000">
+      <p className="text-sm mt-4 relative z-10 duration-1000">
         <strong>Note:</strong> {message}
       </p>
     </a>

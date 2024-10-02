@@ -1,11 +1,11 @@
 import Nav from "@/app/components/nav";
-import Logo from "@/app/assets/logo";
+import LogoHeader from "@/app/assets/logoHeader";
 
 export default function Header() {
   return (
-    <div className="">
+    <div className="px-2 md:px-10">
       <div className="flex justify-between items-center">
-        <Logo />
+        <LogoHeader />
         <Nav />
       </div>
     </div>
