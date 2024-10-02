@@ -5,10 +5,12 @@ import Info from "@/app/sections/info";
 import Menu from "@/app/sections/menu";
 import Location from "@/app/sections/location";
 import Contact from "@/app/sections/contact";
+import Footer from "@/app/sections/footer";
+import ScrollUp from "@/app/components/scrollUp";
 
 export default function Home() {
   return (
-    <div className="px-2 md:px-10 bg-white-yellow">
+    <div className="bg-white-yellow">
       <Header />
       <Hero />
       <Partners />
@@ -16,6 +18,8 @@ export default function Home() {
       <Menu />
       <Location />
       <Contact />
+      <Footer />
+      <ScrollUp />
     </div>
   );
 }
