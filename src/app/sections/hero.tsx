@@ -1,4 +1,4 @@
-"use client"; // Required because we're using client-side hooks and animations
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
