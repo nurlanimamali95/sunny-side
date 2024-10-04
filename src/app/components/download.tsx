@@ -45,7 +45,7 @@ function DownloadButton() {
 
 export default function DownloadSection() {
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <div className="max-w-[20rem] bg-primary-black text-white-yellow p-4 h-fit rounded-lg shadow-md">
         <h3 className="text-xl font-bold mb-4">Download Our Menu</h3>
         <p className="text-sm mb-6">

@@ -12,7 +12,6 @@ export default function Cards() {
           contactPerson="Aydin"
           contactNumber="+31 644 773 748"
           message="All products are handmade and tend to sell out very quickly. Please call ahead to check availability before visiting!"
-          href="#"
           imageSrc="/images/loc1.jpg"
         />
 
@@ -24,7 +23,6 @@ export default function Cards() {
           contactPerson="Larisa"
           contactNumber="+31 645 761 178"
           message="All products are handmade and tend to sell out very quickly. Please call ahead to check availability before visiting!"
-          href="#"
           imageSrc="/images/loc2.jpg"
         />
 
@@ -36,7 +34,6 @@ export default function Cards() {
           contactPerson="Irena"
           contactNumber="+31 641 705 040"
           message="All products are handmade and tend to sell out very quickly. Please call ahead to check availability before visiting!"
-          href="#"
           imageSrc="/images/loc3.jpg"
         />
       </div>
@@ -47,7 +44,6 @@ export default function Cards() {
 interface ItemType {
   title: string;
   subtitle: string;
-  href: string;
   imageSrc: string;
   workingHours: string;
   eatIn: boolean;
@@ -59,7 +55,6 @@ interface ItemType {
 function Item({
   title,
   subtitle,
-  href,
   imageSrc,
   workingHours,
   eatIn,
@@ -68,10 +63,7 @@ function Item({
   message,
 }: ItemType) {
   return (
-    <a
-      href={href}
-      className="w-full max-w-[30rem] h-fit p-6 border relative overflow-hidden group bg-white"
-    >
+    <div className="w-[25rem] min-w-[20rem] h-fit p-6 border relative overflow-hidden group bg-white">
       <div className="absolute inset-0 bg-mid-yellow translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
       <div className="relative w-full h-[12rem] mb-4 overflow-hidden">
         <div className="relative w-full h-full transition-transform duration-1000 ease-in-out transform group-hover:scale-110">
@@ -103,6 +95,6 @@ function Item({
       <p className="text-sm mt-4 relative z-10 duration-1000">
         <strong>Note:</strong> {message}
       </p>
-    </a>
+    </div>
   );
 }

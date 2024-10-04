@@ -9,7 +9,7 @@ export default function LogoHeader() {
       viewBox="0 0 292 188"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-32 h-auto my-2"
+      className="w-16 lg:w-32 h-auto my-2"
     >
       <motion.path
         d="M93.516 187.031C41.952 187.031 0 145.079 0 93.515C0 41.95 41.952 0 93.516 0C145.08 0 187.031 41.95 187.031 93.515C187.031 145.079 145.08 187.031 93.516 187.031Z"

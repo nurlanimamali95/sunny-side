@@ -25,7 +25,7 @@ const ContactForm = () => {
         </motion.h2>
 
         <motion.p
-          className="mt-2 text-center text-2xl text-nowrap text-gray-600"
+          className="mt-2 text-center text-2xl lg:text-nowrap text-gray-600"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -54,10 +54,7 @@ const ContactForm = () => {
             transition={{ duration: 0.8 }}
           >
             Or call us at{" "}
-            <a
-              href={`tel:${callNumber}`}
-              className="text-blue-500 underline"
-            >
+            <a href={`tel:${callNumber}`} className="text-blue-500 underline">
               {callNumber}
             </a>
           </motion.p>
