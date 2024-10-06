@@ -47,7 +47,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
   return (
     <div>
       <button
-        className="hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-b-[1px] border-slate-200 flex flex-row justify-between items-center gap-4 relative group"
+        className="hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-b-[1px] border-slate-200 flex flex-row justify-between items-center gap-4 relative group w-full"
         onClick={() => setOpen(isOpen ? null : id)}
       >
         <span className="block text-4xl font-light font-abraz-script">
