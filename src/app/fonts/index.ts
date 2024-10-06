@@ -19,7 +19,7 @@ export const savate = localFont({
 });
 
 export const abrazScript = localFont({
-  src: "./abraz-script/ABRAZ1.ttf",
+  src: "/fonts/abraz-script/ABRAZ1.ttf",
   display: "swap",
   variable: "--font-abraz-script",
 });

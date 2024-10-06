@@ -45,7 +45,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
   const isOpen = open === id;
 
   return (
-    <>
+    <div>
       <button
         className="hover:bg-primary-black hover:text-primary-white bg-dark-yellow transition-colors p-3 border-b-[1px] border-slate-200 flex flex-row justify-between items-center gap-4 relative group"
         onClick={() => setOpen(isOpen ? null : id)}
@@ -147,7 +147,7 @@ function Panel({ open, setOpen, id, title, description }: PanelProps) {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
